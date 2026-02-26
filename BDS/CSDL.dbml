@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLBDS" Class="CSDLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=TruongPhu\SQLEXPRESS;Initial Catalog=QLBDS;User ID=laptrinhweb" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLBDSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DanhMucBan" Member="DanhMucBans">
+    <Type Name="DanhMucBan">
+      <Column Name="IDDanhMucban" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ViTri" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HienThi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMatHang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BangMatHang_DanhMucBan" Member="BangMatHang" ThisKey="IDMatHang" OtherKey="IDMatHang" Type="BangMatHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DanhMucChoThue" Member="DanhMucChoThues">
+    <Type Name="DanhMucChoThue">
+      <Column Name="IDDanhMuc" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ViTri" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HienThi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMatHang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BangMatHang_DanhMucChoThue" Member="BangMatHang" ThisKey="IDMatHang" OtherKey="IDMatHang" Type="BangMatHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BangMatHang" Member="BangMatHangs">
+    <Type Name="BangMatHang">
+      <Column Name="IDMatHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NoiBat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BangMatHang_DanhMucBan" Member="DanhMucBans" ThisKey="IDMatHang" OtherKey="IDMatHang" Type="DanhMucBan" />
+      <Association Name="BangMatHang_DanhMucChoThue" Member="DanhMucChoThues" ThisKey="IDMatHang" OtherKey="IDMatHang" Type="DanhMucChoThue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_dat_phong" Member="tb_dat_phongs">
+    <Type Name="tb_dat_phong">
+      <Column Name="id_don_dat_phong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_phong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_nguoi_dat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_dien_thoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

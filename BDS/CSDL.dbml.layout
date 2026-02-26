@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CSDL">
+  <DataContextMoniker Name="/CSDLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="938717ae-02c1-48ab-a7e3-7b211583bbe2" isExpanded="false" absoluteBounds="1.375, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/CSDLDataContext/DanhMucBan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0efcf3c3-0406-4894-a090-ccad3e2b3f89" absoluteBounds="1.3900000000000001, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4bac939d-aedc-4e5d-bc51-9149853a2d30" isExpanded="false" absoluteBounds="4.75, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/CSDLDataContext/DanhMucChoThue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a83ec67a-9471-4078-93cf-3558ce89beaf" absoluteBounds="4.765, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f173c490-0ec0-43b5-ad09-43578235f5ff" isExpanded="false" absoluteBounds="3.125, 2.375, 2, 0.45">
+      <DataClassMoniker Name="/CSDLDataContext/BangMatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28daebf7-53b1-4cc7-ae5a-e01e6107235c" absoluteBounds="3.14, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 2.375); (3.25 : 1.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CSDLDataContext/BangMatHang/BangMatHang_DanhMucBan" />
+      <nodes>
+        <classShapeMoniker Id="f173c490-0ec0-43b5-ad09-43578235f5ff" />
+        <classShapeMoniker Id="938717ae-02c1-48ab-a7e3-7b211583bbe2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.9375 : 2.375); (4.9375 : 1.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CSDLDataContext/BangMatHang/BangMatHang_DanhMucChoThue" />
+      <nodes>
+        <classShapeMoniker Id="f173c490-0ec0-43b5-ad09-43578235f5ff" />
+        <classShapeMoniker Id="4bac939d-aedc-4e5d-bc51-9149853a2d30" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="178670eb-82ec-4cdb-be6c-37d8cc19d6f5" absoluteBounds="5.625, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CSDLDataContext/tb_dat_phong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0838625d-d517-4320-b0d8-03b940aca0c1" absoluteBounds="5.64, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
